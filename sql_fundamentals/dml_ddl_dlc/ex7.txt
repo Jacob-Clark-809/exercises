@@ -1,0 +1,3 @@
+\d things
+
+This uses neither DDL, DML, or DCL. It is a psql meta-command.

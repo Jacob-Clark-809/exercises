@@ -1,0 +1,7 @@
+DDL: Data Definition Language. This sub-language deals with creating the
+schema for your database, such as creating tables and managaging contstraints.
+Two DDL Statements are: CREATE TABLE and ALTER COLUMN.
+
+DML: Data Manipulation Language. This sub-language deals with the data actually
+contained within the tables of your database. In particular it deals with CRUD:
+Create, Read, Update, Delete. Two DML statements are: SELECT and INSERT.
