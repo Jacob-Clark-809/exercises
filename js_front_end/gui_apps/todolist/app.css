@@ -1,0 +1,50 @@
+.remove {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+}
+
+li {
+  padding: 10px 10px 0px 10px;
+}
+
+.confirmation_prompt {
+  display: none;
+  width: 500px;
+  height: 150px;
+  position: absolute;
+  z-index: 10;
+  top: 150px;
+  left: 50%;
+  margin-left: -200px;
+  border: 1px solid #ccc;
+  background: #eee;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.context_menu {
+  position: fixed;
+  z-index: 10000;
+  width: 150px;
+  background: #1b1a1a;
+  border-radius: 5px;
+  display: none;
+}
+
+.context_menu.visible {
+  display: block;
+}
+
+.context_menu .item {
+  padding: 8px 10px;
+  font-size: 15px;
+  color: #eee;
+  cursor: pointer;
+  border-radius: inherit;
+}
+
+.context_menu .item:hover {
+  background: #343434;
+}

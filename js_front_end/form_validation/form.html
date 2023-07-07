@@ -1,0 +1,49 @@
+<!doctype html>
+<head>
+  <script src='form.js'></script>
+  <link href='form.css' rel='stylesheet'>
+</head>
+<body>
+  <h3>Sign up Form</h3>
+  <form novalidate>
+    <span id='form_error' class='error_message'></span>
+    <div class='field'>
+      <label for='first_name'>First Name:</label>
+      <input id = 'first_name' type='text' name='first_name' required data-allowed-chars="[a-zA-Z'\s]">
+      <span class='error_message'></span>
+    </div>
+    <div class='field'>
+      <label for='last_name'>Last Name:</label>
+      <input id = 'last_name' type='text' name='last_name' required data-allowed-chars="[a-zA-Z'\s]">
+      <span class='error_message'></span>
+    </div>
+    <div class='field'>
+      <label for='email' >Email:</label>
+      <input id = 'email' type='text' name='email' placeholder='someone@example.com' required pattern='^.+@.+$'>
+      <span class='error_message'></span>
+    </div>
+    <div class='field'>
+      <label for='password'>Password:</label>
+      <input id='password' type='password' name='password' required minlength=10>
+      <span class='error_message'></span>
+    </div>
+    <div class='field'>
+      <label for='phone'>Phone Number:</label>
+      <input id = 'phone' type='text' name='phone' placeholder='111-222-3333' pattern='^\d\d\d-\d\d\d-\d\d\d\d$' data-allowed-chars='[0-9-]'>
+      <span class='error_message'></span>
+    </div>
+    <div class='credit_card'>
+      <label for='credit_card'>Credit Card:</label>
+      <input id='cd1' name='credit_card' type='text' maxlength=4 pattern='^\d\d\d\d$' data-allowed-chars='[0-9]'>
+      <input id='cd2' name='credit_card' type='text' maxlength=4 pattern='^\d\d\d\d$' data-allowed-chars='[0-9]'>
+      <input id='cd3' name='credit_card' type='text' maxlength=4 pattern='^\d\d\d\d$' data-allowed-chars='[0-9]'>
+      <input id='cd4' name='credit_card' type='text' maxlength=4 pattern='^\d\d\d\d$' data-allowed-chars='[0-9]'>
+      <span class='error_message'></span>
+    </div>
+    <button id = 'sign_up' type='submit'>Sign Up</button>
+  </form>
+
+  <block>
+    <h3>Serialized Form</h3>
+  </block>
+</body>

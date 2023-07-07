@@ -1,0 +1,12 @@
+img {
+  width: 300px;
+}
+
+figure {
+  display: inline-block;
+}
+
+figcaption {
+  display: none;
+  width: 300px;
+}

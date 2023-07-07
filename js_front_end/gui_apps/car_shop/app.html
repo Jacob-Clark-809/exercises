@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cars for Sale</title>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <link rel=styelsheet href='whitespace-reset.css'>
+  <link rel="stylesheet" href="app.css">
+  <script src='app.js'></script>
+</head>
+<body>
+  <header>
+    <h1>Buy Used Cars</h1>
+    <div id="filters"></div>
+  </header>
+  <main>
+    <div id="cars"></div>
+  </main>
+
+  <script type='text/x-handlebars' id='selectTemplate'>
+    <label for={{title}}>{{title}}:</label>
+    <select id={{title}} name={{title}}>
+      <option value='Any'>Any</option>
+      {{#each options}}
+      <option value={{this}}>{{this}}</option>
+      {{/each}}
+    </select>
+  </script>
+
+  <script type='text/x-handlebars' id='carTemplate' data-type='partial'>
+    <div class='car'>
+      <figure>
+        <img src={{image}}>
+      </figure>
+      <h2>{{make}} {{model}}</h2>
+      <p class='year'>Year: {{year}}</p>
+      <p class='price'>Price: {{price}}</p>
+      <a href='#'>Buy</a>
+    </div>
+  </script>
+
+  <script type='text/x-handlebars' id='carsList'>
+    {{#each cars}}
+    {{> carTemplate}}
+    {{/each}}
+  </script>
+</body>
+</html>

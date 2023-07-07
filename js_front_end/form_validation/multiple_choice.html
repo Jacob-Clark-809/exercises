@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+  <link href='multiple_choice.css' rel='stylesheet'>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src='multiple_choice.js'></script>
+</head>
+<body>
+  <h2>Multiple Choice Quiz</h2>
+  <form>
+    <fieldset>
+
+    </fieldset>
+    <button type='submit' id='submit_button'>Submit</button>
+    <button id='reset_button' disabled>Reset</button>
+  </form>
+
+  <script id='questionTemplate' type='text/x-handlebars'>
+    <div class='question' data-id={{id}}>
+      <p>Q{{id}}. {{{description}}}</p>
+      {{#each options}}
+        <label><input type='radio' name={{../id}} value="{{this}}">{{this}}</label>
+      {{/each}}
+      <p class='result'></p>
+    </div>
+  </script>
+
+  <script id='questionList' type='text/x-handlebars'>
+    {{#each questions}}
+    {{> questionTemplate}}
+    {{/each}}
+  </script>
+</body>

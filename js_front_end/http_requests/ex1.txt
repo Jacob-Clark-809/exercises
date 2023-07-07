@@ -1,0 +1,4 @@
+1. There are five members of staff (/api/staff_members)
+2. There are five students (/api/students)
+3. There are nine schedules (/api/schedules)
+4. There are three bookings (/api/schedules => student_email === null)
