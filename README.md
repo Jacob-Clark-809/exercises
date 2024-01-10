@@ -1,1 +1,3 @@
-This repository follows the exercises provided by Launch School.
+## Exercises
+
+A collection of Ruby, JavaScript, and SQL exercises focussed on fundamentals.
